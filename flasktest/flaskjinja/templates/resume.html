@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}
+이력서
+{% endblock title %}
+
+{% block head %}
+
+{% endblock head %}
+
+{% block content %}
+<form action="/resumeUpload" method="POST" enctype="multipart/form-data">
+    <div class="form-row" >
+        <div class="col-md-6 mb-3">
+            <label for="validationServer01">First name</label>
+            <input type="text" class="form-control is-valid" id="validationServer01" value="Mark" name="firstname" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="validationServer02">Last name</label>
+            <input type="text" class="form-control is-valid" id="validationServer02" value="Otto" name="secondname" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label for="validationServer03">City</label>
+            <input type="text" class="form-control is-invalid" id="validationServer03" name="city" required>
+            <div class="invalid-feedback">
+                Please provide a valid city.
+            </div>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label for="validationServer03">your image</label>
+            <input type="file" class="form-control is-invalid" id="validationServer04" name="file" required>
+            <div class="invalid-feedback">
+                Please provide a valid city.
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit form</button>
+</form>
+{% endblock content %}
+
+{% block footer %}
+{% endblock footer %}

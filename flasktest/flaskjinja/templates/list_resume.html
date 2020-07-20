@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}
+file list
+{% endblock title %}
+
+{% block head %}
+
+{% endblock head %}
+
+{% block content %}
+    <br>
+    <h1 class="blockquote text-center">다운로드 파일 목록</h1>
+    <div class="container">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">City</th>
+                <th scope="col">Image</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for resume in result %}
+                <tr>
+                        <th scope="row">{{loop.index}}</th>
+                        <td>{{resume.firstname}}</td>
+                        <td>{{resume.secondname}}</td>
+                        <td>{{resume.city}}</td>
+                        <td>{{resume.file}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+          </table>
+    </div>
+{% endblock content %}
+
+{% block footer %}
+{% endblock footer %}
