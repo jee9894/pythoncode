@@ -10,7 +10,7 @@ datetimeObj = datetime.datetime.strptime('%Y%m%d', movieDate).date()
 movieDate = (datetimeObj - datetime.timedelta(days=1)).strftime('%Y%m%d')
 
 key = '3180a828a229d025fdf5b16af475063f'
-url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=%s&targetDt=%s&multiMovieYn=%s&repNationCd=%s" % (key,'20200716','N', 'K')# json 결과
+url = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=%s&targetDt=%s&multiMovieYn=%s&repNationCd=%s" % (key,movieDate,'N', 'K')# json 결과
 request = urllib.request.Request(url)
 
 response = urllib.request.urlopen(request)
